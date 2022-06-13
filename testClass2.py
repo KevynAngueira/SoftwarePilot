@@ -44,8 +44,7 @@ from olympe.messages.camera import (
 	alignment_offsets,
 )
 
-# Constants
-DOWNLOAD_DIR = "/home/reroutlab/Desktop/tmp2"
+DOWNLOAD_DIR = # REMEMBER TO UPDATE FILEPATH
 
 
 class AnafiController:
