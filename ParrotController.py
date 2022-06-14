@@ -460,12 +460,14 @@ class AnafiPiloting:
 
 	def cancel_move_to(self):
 		self.drone.CancelMoveTo()
-
+		
+'''
 if __name__ == "__main__":
 	drone_controller = AnafiController(1, DOWNLOAD_DIR)
 
 	drone_controller.connect()
-	
+	'''
+
 	'''
 	# Photo Example
 	drone_controller.camera_media.setup_photo()
@@ -513,4 +515,6 @@ if __name__ == "__main__":
 	drone_controller.piloting.move_to(lat, lon, alt)
 	'''
 
+	'''
 	drone_controller.disconnect()
+	'''
