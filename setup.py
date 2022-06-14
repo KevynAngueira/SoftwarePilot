@@ -1,7 +1,7 @@
 import setuptools
 
 long_desc = open("README.md").read()
-required = [csv, math, os, time, queue, shlex, subprocess, threading, cv2, re, requests, shutil, olympe] # Comma seperated dependent libraries name
+required = [csv, math, os, time, queue, shlex, subprocess, threading, cv2, re, requests, shutil, olympe]
 
 setuptools.setup(
     name="ParrotController",
