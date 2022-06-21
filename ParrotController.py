@@ -1,14 +1,9 @@
 import csv
-import math
 import os
 import time
 import queue
-import shlex
-import subprocess
-import tempfile
 import threading
 import cv2
-import re
 import requests
 import shutil
 
@@ -43,9 +38,6 @@ from olympe.messages.camera import (
 	set_alignment_offsets,
 	alignment_offsets,
 )
-
-DOWNLOAD_DIR = # REMEMBER TO UPDATE FILEPATH
-
 
 class AnafiController:
 	def __init__(self, connection_type, download_dir):
@@ -126,8 +118,7 @@ class AnafiCameraMedia:
 			self.camera_mode = "photo"
 		print("< Photo Mode >")
 	
-	def take_photo(self):
-		self.auto_setup_photo()		
+	def take_photo(self):	
 		self.media_saved = self.drone(photo_progress(result="photo_saved", _policy="wait"))
 		self.drone(take_photo(cam_id=0)).wait()
 		self.media_saved.wait()
@@ -391,7 +382,7 @@ class AnafiCameraControls:
 		self.drone(reset_alignment_offsets(cam_id = 0)).wait()
 	
 	# Must be reset before setting zoom again
-	def set_zoom(self, control_mode = "level", target):
+	def set_zoom(self, target, control_mode = "level"):
 		self.drone(set_zoom_target(cam_id = 0, control_mode = control_mode, target = target)).wait()
 	
 	# Must be reset before setting alignment offsets again
@@ -460,61 +451,3 @@ class AnafiPiloting:
 
 	def cancel_move_to(self):
 		self.drone.CancelMoveTo()
-		
-'''
-if __name__ == "__main__":
-	drone_controller = AnafiController(1, DOWNLOAD_DIR)
-
-	drone_controller.connect()
-	'''
-
-	'''
-	# Photo Example
-	drone_controller.camera_media.setup_photo()
-	drone_controller.camera_media.take_photo()
-	drone_controller.camera_media.download_last_media()
-	'''
-	
-	'''
-	# Recording Example
-	drone_controller.camera_media.setup_recording()
-	drone_controller.camera_media.start_recording()
-	time.sleep(10)
-	drone_controller.camera_media.stop_recording()
-	'''
-
-	'''
-	# Streaming Example
-	drone_controller.camera_media.setup_stream()
-	drone_controller.camera_media.start_stream()
-	time.sleep(10)
-	drone_controller.camera_media.stop_stream()
-	'''
-	
-	'''
-	# Zoom Example
-	drone_controller.camera_controls.set_zoom(target = 2)
-	time.sleep(10)
-	drone_controller.camera_controls.reset_zoom()
-	'''
-
-	'''
-	# Alignment Offsets Example
-	drone_controller.camera_controls.set_alignment_offsets(20, 0, 0, 0)
-	time.sleep(10)
-	drone_controller.camera_controls.reset_alignment_offsets()
-	'''
-
-	'''
-	# Move By Example
-	drone_controller.piloting.move_by(x, y, z, angle)
-	'''
-	
-	'''
-	# Move To Example
-	drone_controller.piloting.move_to(lat, lon, alt)
-	'''
-
-	'''
-	drone_controller.disconnect()
-	'''
