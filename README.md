@@ -11,7 +11,7 @@ Install the library:
   ```
 2. Pip install
   ```sh
-  pip install ParrotController
+  pip install ParrotAnafiController
   ```
 
 ## Authors
