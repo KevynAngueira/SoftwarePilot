@@ -1,7 +1,5 @@
-# Parrot-Controller
-ParrotController is an Olympe wrapper for the Parrot Anafi drone.
-This API allows you to connect and interface with the Parrot Anafi;
-namely, provides movement and camera functionalities
+# SoftwarePilot
+SoftwarePilot is an open source middleware and API that supports aerial applications. SoftwarePilot allows users to connect consumer Parrot Anafi drones to programmable pythonscripts that provide access to the drones flight controller, camera, and navigation system as well as custom rest api and dockerfile integration.
 
 ## Getting Started
 Install the library:
@@ -11,7 +9,7 @@ Install the library:
   ```
 2. Pip install
   ```sh
-  pip install ParrotAnafiController
+  pip install SoftwarePilot
   ```
 
 ## Authors
