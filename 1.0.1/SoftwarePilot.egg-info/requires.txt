@@ -1,0 +1,4 @@
+docker>=5.0.3
+opencv_python>=4.6.0.66
+prettytable>=3.3.0
+requests>=2.22.0
