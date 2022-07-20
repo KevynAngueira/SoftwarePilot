@@ -2,7 +2,7 @@ from fastapi import File, UploadFile, FastAPI
 import uvicorn
 # ADD: libraries to import
 
-HOST = "192.168.0.21" # REPLACE: IP for the URL
+HOST = "0.0.0.0" # REPLACE: IP for the URL
 PORT = 8000 # REPLACE: Port for the URL
 INPUT_SHAPE = "None" # REPLACE: the expected input shape
 RESPONSE_KEYS = ["key"] # REPLACE: keys to be included in the response, must match response_values
