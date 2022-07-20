@@ -94,7 +94,6 @@ Install the library:
 	SoftwarePilot provides a python template of a Rest API which the user is meant to modify and dockerize
 	This API is meant to offload the image processing workload to a more capable machine
 	SoftwarePilot does not limit the service to which it will connect to, but the basic structure must be followed for proper behavior
-	Any tasks outside SoftwarePilotService's capabilities should be outsourced to the requests library
 	'''
 
 	sp = SoftwarePilot()
