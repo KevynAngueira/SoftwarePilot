@@ -1,0 +1,56 @@
+[AnafiController]
+	Parrot Olympe wrapper for controlling Parrot Anafi drones.
+		
+	...
+
+	Attributes
+	----------
+	drone_ip : str
+		the drone's ip address
+	drone_rtsp_port : str
+		the drone's rtsp port which connects to the live stream
+	drone_url : str
+		the url used request to make requests from the drone
+	drone : olympe.Drone
+		the drone object
+	camera : AnafiCamera
+		the drone camera method interface
+	piloting : AnafiPiloting
+		the drone piloting method interface
+	rth : AnafiRTH
+		the drone Return From Home (RTH) methods interface	
+
+	Methods
+	-------
+	connect()
+		Establishes a connection with the drone
+	disconnect()
+		Breaks current connection with the drone
+	get_drone_coordinates()
+		Returns drone's current gps coordinates
+	
+	[__init__(self, connection_type, download_dir)]
+		Parameters
+		----------
+		connection_type : str or int, optional
+			The connection type to the drone (default = 1)
+			- 'physical' or 0
+			- 'controller' or 1
+		download_dir : str, optional
+			The location drone media will be downloaded (default = "None")
+			If none is provided, it will save them in /AnafiMedia
+			If the directory does not exist it will be created
+
+	[connect(self)]
+		Establishes a connection with the drone
+
+	[disconnect(self)]
+		Breaks current connection with the drone
+
+	[get_drone_coordinates(self)]
+		Returns drone's current gps coordinates
+		
+		Return
+		----------
+		coordinates : str[latitude, longitude, altitude]
+			list containing the current latitude, longitude, and altitude gps values
