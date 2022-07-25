@@ -1,0 +1,5 @@
+docker>=5.0.3
+opencv-python>=4.6.0.66
+requests>=2.22.0
+PySDL2>=0.9.12
+PyOpenGL>=3.1.6
