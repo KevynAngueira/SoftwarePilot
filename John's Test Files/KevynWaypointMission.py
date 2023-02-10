@@ -27,7 +27,7 @@ def traverseWaypointFile(filename, drone):
             longitude = waypoint[1]
             '''
             Unsure if altitude is measured in meters or in feet
-            Use top one if its in meters
+            Use top one if its in feet
             '''
             # altitude = waypoint[2]
             altitude = waypoint[2]/3.28084
@@ -41,10 +41,10 @@ def traverseWaypointFile(filename, drone):
 if __name__ == "__main__":
     '''
     Unsure if altitude is measured in meters or in feet
-    Use top one if its in meters
+    Use top one if its in feet
     '''
-    # CLEARANCE_ALTITUDE = 3
-    CLEARANCE_ALTITUDE = 10
+    # CLEARANCE_ALTITUDE = 10
+    CLEARANCE_ALTITUDE = 3
 
     waypoint_files = getWaypointFiles()
 
