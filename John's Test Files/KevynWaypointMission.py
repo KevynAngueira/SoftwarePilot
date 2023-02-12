@@ -2,13 +2,39 @@
 Given a CSV file containing waypoint data,this Code implements a Wapoint mission on an anafi parrot sUAV. The code is adapted from a sample
 program written by Kevyn Angueira.
 
-John Chumley 28OCT2022
-
 '''
 
 from SoftwarePilot import SoftwarePilot
 import sys
 import csv
+import time
+
+
+# actionType = -1
+def noAction(drone, param):
+    pass
+
+
+# actionType = 0
+def pauseDrone(drone, param):
+    time.sleep(param/1000.0)
+
+
+# actionType = 1
+def takePhoto(drone, param):
+    drone.camera.media.take_photo()
+    drone.camera.media.download_last_media()
+
+
+# actionType = 5
+def tiltGimbal(drone, param):
+    drone.camera.controls.reset_alignment_offset()
+    drone.camera.controls.set_alignment_offset(0, param, 0)
+
+
+def executeAction(drone, action, param):
+    action_map = {-1: noAction, 0: pauseDrone, 1: takePhoto, 5: tiltGimbal}
+    action_map[action](drone, param)
 
 
 def getWaypointFiles():
@@ -34,8 +60,9 @@ def traverseWaypointFile(filename, drone):
             heading = waypoint[3]
 
             drone.piloting.move_to(latitude, longitude, altitude, heading=heading)
-            drone.camera.media.take_photo()
-            drone.camera.media.download_last_media()
+
+            for action in range(8, 37, 2):
+                executeAction(drone, action, action+1)
 
 
 if __name__ == "__main__":
@@ -53,10 +80,7 @@ if __name__ == "__main__":
     drone.connect()
 
     home = drone.get_drone_coordinates()
-
     drone.camera.media.setup_photo()
-    # Yaw, Pitch, and Roll in degrees, change the numbers if the camera ain't looking down
-    drone.camera.controls.set_alignment_offset(0, -90, 0)
     drone.piloting.takeoff()
 
     for file in waypoint_files:
