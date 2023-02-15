@@ -1,0 +1,9 @@
+PyOpenGL>=3.1.6
+PySDL2>=0.9.12
+docker>=5.0.3
+fastapi>=0.79.0
+opencv-python>=4.6.0.66
+parrot-olympe>=7.3.0
+python-multipart>=0.0.5
+requests>=2.22.0
+uvicorn>=0.18.2
