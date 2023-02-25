@@ -71,7 +71,7 @@ class WaypointTraverser:
 				for x in range(8, 37, 2):
 					action = int(waypoint[x])
 					self.executeAction(drone, action, action+1)
-					print(action)
+					# print(action)
 					if (action == -1):
 						break
 				self.waypoint_num += 1
