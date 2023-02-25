@@ -4,7 +4,7 @@ program written by Kevyn Angueira.
 
 '''
 
-# from SoftwarePilot import SoftwarePilot
+from SoftwarePilot import SoftwarePilot
 import sys
 import csv
 import time
