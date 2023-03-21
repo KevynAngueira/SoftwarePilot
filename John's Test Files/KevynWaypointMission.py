@@ -34,8 +34,7 @@ class WaypointTraverser:
 
 	# actionType = 5
 	def tiltGimbal(self, drone, param):
-	    drone.camera.controls.reset_alignment_offset()
-	    drone.camera.controls.set_alignment_offset(0, param, 0)
+	    drone.camera.controls.set_orientation(0,param,0)
 
 	def executeAction(self, drone, action, param):
 	    action_map = {-1: self.noAction, 0: self.pauseDrone, 1: self.takePhoto, 5: self.tiltGimbal}
@@ -60,7 +59,7 @@ class WaypointTraverser:
 				altitude = float(waypoint[2])/3.28084
 				heading = float(waypoint[3])
 
-				drone.piloting.move_to(latitude, longitude, altitude, heading=heading)
+				drone.piloting.move_to(latitude, longitude, altitude, heading=heading, wait = True)
 				'''
 				print(latitude)
 				print(longitude)
