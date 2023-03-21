@@ -30,7 +30,7 @@ Install the library:
 
 	drone.piloting.takeoff()
 
-	# The drone will move forward 10 feet (x, y, z, angle)
+	# The drone will move forward 10 meters (x, y, z, angle)
 	drone.piloting.move_by(10,0,0,0, wait = True)
 
 	drone.piloting.land()
