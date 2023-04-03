@@ -1,0 +1,140 @@
+[SoftwarePilotDocker]
+	docker wrapper library for easier interaction with SoftwarePilot
+	
+	...
+	
+	Attributes
+	----------
+	client : docker client
+		the docker client
+	
+	Methods
+	-------
+	deploy_container(image, detach, ports)
+		deploys a docker container from a given image and connects to it
+	connect_to_container(container_id)
+		connects to an active container
+	run_command(container, command)
+		runs a command on a given image
+	list_containers()
+		prints a list of all containers
+	list_image()
+		prints a list of all local images
+	get_container_id(image_name)
+		returns the short id of an active container from a given image name
+	get_container_name(image_id)
+		returns the image name of an active container from a given short id
+	get_container_ip(image_id)
+		returns the container ip of an active container from a given short id
+	print_logs(container)
+		prints the logs of an active container
+	stop_container(container_id)
+		stops an active container from a given container id
+	stop_all_containers()
+		stops all active containers
+	
+	[deploy_container(image, detach, ports)]
+		deploys a docker container from a given image and connects to it
+		
+		Parameters
+		----------
+		image : str
+			the docker image to be run
+		detach : bool, optional
+			if True the docker is detached from the terminal (default = True)
+		ports : map{ computer port : docker port }
+			maps the ports from the docker to the machine
+		
+		Return
+		----------
+		container : Docker Container
+			the deployed docker container
+
+	[connect_to_container(container_id)]
+		connects to an active container
+		
+		Parameters
+		----------
+		container_id : str
+			the id of the container to connect to
+		
+		Return
+		----------
+		container : Docker Container 
+			the connected docker container
+		
+	[run_command(container, command)]
+		runs a command on a given image
+		
+		Parameters
+		----------
+		container : docker container
+			the container to run the command on
+		command : str
+			the command to run
+	
+	[list_containers()]
+		prints a list of all containers
+	
+	[list_images()]
+		prints a list of all local images
+	
+	[get_container_id(image_name)]
+		returns the short id of an active container from a given image name
+		
+		Parameters
+		----------
+		image_name : str
+			the name of the image to fetch the short id of its container
+		
+		Return
+		----------
+		id : str
+			the requested container short id
+			
+	[get_container_name(container_id)]
+		returns the image name of an active container from a given container short id
+		
+		Parameters
+		----------
+		container_id : str
+			the id of the container to fetch the name of its image
+			
+		Return
+		----------
+		name : str
+			the image name
+			
+	
+	[get_container_ip(container_id)]
+		returns the ip address of an active container from a given short id
+		
+		Parameters
+		----------
+		container_id : str
+			the id of the container to fetch the ip of
+			
+		Return
+		----------
+		ip : str
+			the requested container ip
+	
+	[print_logs(container)]
+		prints the logs of an active container
+		
+		Parameters
+		----------
+		container: docker container
+			the container to print the logs of
+	
+	[stop_container(container_id)]
+		stops an active container from a given container id
+		
+		Parameters
+		----------
+		container : docker container
+			the container to stop
+			
+	[stop_all_containers()]
+		stops all active containers
+	
