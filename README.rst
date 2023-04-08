@@ -14,9 +14,8 @@ Install the library:
 
 First Time Set Up:
 ~~~~~~~~~~~~~~~~~~
-First time set up:
-1. Pair the drone
-  a. Turn on the Parrot-Anafi drone.
-  b. Turn on the Skycontroller.
-  c. Connect a USB to USB-C cable to the Skycontroller and drone respectively.
-  d. Wait until the blinking light on the controller turns into a solid blue light.
+Pair the drone:
+  1. Turn on the Parrot-Anafi drone.
+  2. Turn on the Skycontroller.
+  3. Connect a USB to USB-C cable to the Skycontroller and drone respectively.
+  4. Wait until the blinking light on the controller turns into a solid blue light.
