@@ -34,5 +34,5 @@ Setting Up:
   2. ``Turn on`` the Skycontroller.
   3. Wait until the blinking light on the controller turns into a ``solid blue light``.
   
-     If the light does not turn solid blue, follow the ``Pair the drone`` instructions from ``First Time Setup``.
+      If the light does not turn solid blue, follow the ``Pair the drone`` instructions from ``First Time Setup``.
   4. Connect a ``USB to USB-C`` cable to the controller and the computer respectively.
