@@ -39,3 +39,6 @@ Setting Up:
   5. ``Run`` the mission!
       
       If the drone does not takeoff when told, follow the ``Calibrate the drone`` instructions above.
+      
+Demos
+-----
