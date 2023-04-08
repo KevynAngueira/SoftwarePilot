@@ -43,7 +43,7 @@ Setting Up:
 Demos
 -----
 1. Simple Start::
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
   from SoftwarePilot import SoftwarePilot
 
