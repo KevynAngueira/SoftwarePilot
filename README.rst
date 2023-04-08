@@ -23,5 +23,6 @@ First Time Set Up:
 
 2. Calibrate the drone:
   1. Download the ``FreeFlight 6`` app on your phone and perform all necesary authentication.
-  2. Connect a USB to USB-C cable to the controller and the phone.
-  3. Press 
+  2. Connect a ``USB to USB-C`` cable to the controller and the phone.
+  3. Press ``Fly`` on the FreeFlight 6 app and follow the instructions on the screen.
+  4. Confirm calibration by launching and then landing the drone with the ``Up and Down arrows`` button on the controller.
