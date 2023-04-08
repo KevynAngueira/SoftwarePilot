@@ -12,8 +12,8 @@ Install the library:
 2. Pip install
   pip install SoftwarePilot
 
-Setting Up:
-~~~~~~~~~~~
+First Time Set Up:
+~~~~~~~~~~~~~~~~~~
 First time set up:
 1. Pair the drone
   a. Turn on the Parrot-Anafi drone.
