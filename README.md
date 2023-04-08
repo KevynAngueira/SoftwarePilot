@@ -11,7 +11,13 @@ Install the library:
   ```sh
   pip install SoftwarePilot
   ```
-## Examples
+### First Time Setup
+
+
+### Setting Up
+  
+  
+## Demos
 1. Simple Start:
   ```sh
 	from SoftwarePilot import SoftwarePilot
