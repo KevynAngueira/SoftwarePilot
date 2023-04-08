@@ -15,11 +15,13 @@ Install the library:
 First Time Set Up:
 ~~~~~~~~~~~~~~~~~~
 1. Pair the drone:
-  1. Turn on the Parrot-Anafi drone.
-  2. Turn on the Skycontroller.
-  3. Connect a USB to USB-C cable to the controller and the drone respectively.
-  4. Wait until the blinking light on the controller turns into a solid blue light.
-  5. Disconnect the controller and the drone.
+  1. ``Turn on`` the Parrot-Anafi drone.
+  2. ``Turn on`` the Skycontroller.
+  3. Connect a ``USB to USB-C`` cable to the controller and the drone respectively.
+  4. Wait until the blinking light on the controller turns into a ``solid blue light``.
+  5. ``Disconnect`` the controller and the drone.
 
 2. Calibrate the drone:
-  1. Download the ''FreeFlight 6'' app and perform all necesary authentication.
+  1. Download the ``FreeFlight 6`` app on your phone and perform all necesary authentication.
+  2. Connect a USB to USB-C cable to the controller and the phone.
+  3. Press 
