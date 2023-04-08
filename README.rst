@@ -7,9 +7,9 @@ Getting Started
 ---------------
 Install the library:
 ~~~~~~~~~~~~~~~~~~~~
-1. Clone the repo, or
+Clone the repo, or
   git clone https://github.com/boredbot2/SoftwarePilot.git
-2. Pip install
+Pip install
   pip install SoftwarePilot
 
 First Time Set Up:
