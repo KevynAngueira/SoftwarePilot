@@ -12,31 +12,32 @@ SoftwarePilot is an open source middleware and API that supports aerial applicat
   pip install SoftwarePilot
   ```
 ### First Time Setup
-  ```sh
-	Pair the drone:
-		1. Turn on the Parrot-Anafi drone.
-		2. Turn on the Skycontroller.
-		3. Connect a USB to USB-C cable to the controller and the drone respectively.
-		4. Wait until the blinking light on the controller turns into a solid blue light.
+Pair the drone:
+```sh
+	1. Turn on the Parrot-Anafi drone.
+	2. Turn on the Skycontroller.
+	3. Connect a USB to USB-C cable to the controller and the drone respectively.
+	4. Wait until the blinking light on the controller turns into a solid blue light.
 		5. Disconnect the controller and the drone.
-	
-	Calibrate the drone:
-		1. Download the FreeFlight 6 app on your phone and perform all necesary authentication.
-		2. Connect a USB to USB-C cable to the controller and the phone.
-		3. Press Fly on the FreeFlight 6 app and follow the instructions on the screen.
-		4. Confirm calibration by launching and then landing the drone with the Up and Down arrows button on the controller.
-		5. Disconnect the controller and the phone.
-  ```
+```	
+Calibrate the drone:
+```sh
+	1. Download the FreeFlight 6 app on your phone and perform all necesary authentication.
+	2. Connect a USB to USB-C cable to the controller and the phone.
+	3. Press Fly on the FreeFlight 6 app and follow the instructions on the screen.
+	4. Confirm calibration by launching and then landing the drone with the Up and Down arrows button on the controller.
+	5. Disconnect the controller and the phone.
+```
 ### Setting Up
- ```sh		
-  	1. Turn on the Parrot-Anafi drone.
+```sh
+	1. Turn on the Parrot-Anafi drone.
 	2. Turn on the Skycontroller.
 	3. Wait until the blinking light on the controller turns into a solid blue light.
 		If the light does not turn solid blue, follow the Pair the drone instructions above.
 	4. Connect a USB to USB-C cable to the controller and the computer respectively.
 	5. Run the mission!
 		If the drone does not takeoff when told, follow the Calibrate the drone instructions above.
-  ```
+```
 ## Demos
 1. Simple Start:
   ```sh
