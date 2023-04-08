@@ -12,7 +12,7 @@ Install the library:
 2. Pip install
   pip install SoftwarePilot
 
-First Time Set Up:
+First Time Setup:
 ~~~~~~~~~~~~~~~~~~
 1. Pair the drone:
   1. ``Turn on`` the Parrot-Anafi drone.
@@ -26,3 +26,12 @@ First Time Set Up:
   2. Connect a ``USB to USB-C`` cable to the controller and the phone.
   3. Press ``Fly`` on the FreeFlight 6 app and follow the instructions on the screen.
   4. Confirm calibration by launching and then landing the drone with the ``Up and Down arrows`` button on the controller.
+  5. ``Disconnect`` the controller and the phone.
+  
+Setting Up:
+~~~~~~~~~~~
+  1. ``Turn on`` the Parrot-Anafi drone.
+  2. ``Turn on`` the Skycontroller.
+  3. Wait until the blinking light on the controller turns into a ``solid blue light``.
+      If the light does not turn solid blue, follow the ``Pair the drone`` instructions from ``First Time Setup``.
+  3. Connect a ``USB to USB-C`` cable to the controller and the computer respectively.
