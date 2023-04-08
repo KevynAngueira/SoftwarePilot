@@ -42,7 +42,7 @@ Setting Up:
       
 Demos
 -----
-1. Simple Start::
+Simple Start::
 
   from SoftwarePilot import SoftwarePilot
 
@@ -68,7 +68,7 @@ Demos
 
 .. code-block:: rst
 
-2. Handling Media::
+Handling Media::
 
   from SoftwarePilot import SoftwarePilot
   import time
@@ -116,7 +116,7 @@ Demos
   drone.disconnect()
 .. code-block:: rst
 
-3 .Service Interaction::
+Service Interaction::
 
   from SoftwarePilot import SoftwarePilot
   import time
@@ -148,7 +148,7 @@ Demos
 
 .. code-block:: rst
 
-4. All Together::
+All Together::
 
   from SoftwarePilot import SoftwarePilot
   import time
