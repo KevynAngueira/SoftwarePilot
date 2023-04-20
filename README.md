@@ -186,3 +186,5 @@ Calibrate the drone:
 ## Authors
 * **[Kevyn Angueira Irizarry](https://github.com/boredbot2)**
 
+# Acknowledgements
+*This work has been funded by grants from the National Science Foundation, including the ICICLE AI Institute (OAC 2112606)*
