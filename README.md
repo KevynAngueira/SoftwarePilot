@@ -34,7 +34,7 @@ Calibrate the drone:
 2. Turn on the Skycontroller.
 3. Wait until the blinking light on the controller turns into a solid blue light.
 	If the light does not turn solid blue, follow the Pair the drone instructions above.
-4. Connect a USB to USB-C cable to the controller and the computer respectively.
+4. Connect a USB to USB-C cable to the computer and the controller respectively.
 5. Run the mission!
 	If the drone does not takeoff when told, follow the Calibrate the drone instructions above.
 ```
