@@ -5,7 +5,7 @@ SoftwarePilot is an open source middleware and API that supports aerial applicat
 ### Install the library
 1. Clone the repo, or
   ```sh
-  git clone https://github.com/boredbot2/SoftwarePilot.git
+  git clone https://github.com/KevynAngueira/SoftwarePilot.git
   ```
 2. Pip install
   ```sh
