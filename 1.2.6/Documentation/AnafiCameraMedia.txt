@@ -1,0 +1,199 @@
+[AnafiCameraMedia]
+	Wrapper for the Parrot Olympe camera methods involving media
+		
+		...
+		
+		Attributes
+		----------
+		drone : olympe.Drone
+			the drone object
+		drone_ip : str
+			the drone's ip_address
+		drone_rtstp_port : str
+			the drone's rtsp port which connects to the live stream
+		drone_url : str
+			the url used request to make requests from the drone
+		drone_media_api_url : str
+			the complete url used to make media requests from the drone
+		download_dir : str
+			The location drone media will be downloaded
+		camera_mode : str
+			the drone's current camera mode (None, photo, recording, streaming)
+		media_id_list
+			A list of media id's of all media saved this mission
+			
+		Methods
+		-------
+		setup_photo(mode, format, file_format, burst, bracketing, capture_interval)
+			Prepares the drone camera for photos, and changes camera_mode to "photo"
+		take_photo()
+			Takes a photo
+		start_lapse_photo()
+			Starts to take time/gps lapse photos
+		stop_lapse_photo()
+			Stops current time/gps lapse photos
+		setup_recording(mode, resolution, framerate, hyperlapse)
+			Prepares the drone camera for recording, and changes camera_mode to "recording"
+		start_recording()
+			Starts a recording
+		stop_recording()
+			Stops current recording
+		add_last_media()
+			Adds the media id of the last media taken to the media list
+		download_media(self, media_id, name, path):
+			Downloads the given media with the given download name at the given location
+		download_last_media(name, path)
+			Downloads the last media taken at the given download name at the given location
+		setup_stream(value, record, yuv_frame_processing, yuv_frame_cb, h264_frame_cb, start_cb, end_cb, flush_cb)
+			Prepares the drone camera for streaming, and changes camera_mode to "streaming"
+		start_stream()
+			Starts the live video stream
+		strop_stream()
+			Stops the current live video stream		
+	
+		[__init__(drone_object, drone_ip, drone_rtsp_port, drone_url, download_dir)]
+			Parameters
+			----------
+			drone_object : olympe.Drone
+				the drone object
+			drone_ip : str
+				the drone's ip_address
+			drone_rtstp_port : str
+				the drone's rtsp port which connects to the live stream
+			drone_url : str
+				the url used request to make requests from the drone
+			download_dir : str
+				The location drone media will be downloaded
+			
+		[setup_photo(mode, format, file_format, burst, bracketing, capture_interval)]
+			Prepares the drone camera for photos, and changes camera_mode to "photo"
+		
+			Parameters
+			----------
+			mode : str, optional
+				the photo mode (default = "single")
+				- "single"/"bracketing"/"burst"/"time_lapse"/"gps_lapse"
+			format : str, optional
+				the photo format (default = "rectilinear")
+				- "full_frame"/"rectilinear"
+			file_format : str, optional
+				the photo file format (default = "dng")
+				- "jpeg"/"dng"/"dng_jpeg"
+			burst : str, optional
+				The amount of photos/second to take (default = "burst_14_over_1s")
+				only used if mode is "burst"
+				- "burst_X_over_Xs" (14/10/4 , 4/2/1)
+			bracketing : str, optional
+				The exposure values of the bracketed photos (default = "preset_1ev")
+				only used if mode is "bracketing"
+				- preset_Xev (1/2/3)
+				- preset_Xev_Xev (1 , 2/3)/(2 , 3)
+				- preset_Xev_Xev_Xev (1 , 2 , 3)
+			capture_interval : float, optional
+				The interval between each photo (default = 0.1)
+				seconds in time lapse and meters in gps lapse
+				only used if mode is "time_lapse" or "gps_lapse"
+		
+		[take_photo()]
+			Takes a photo
+		
+		[start_lapse_photo()]
+			Starts to take time/gps lapse photos. Continues to take pictures until "stop_lapse_photo" is called
+			Should only be used when camera mode is set to eiher "time_lapse" or "gps_lapse"
+		
+		[stop_lapse_photo()]
+			Stops current time/gps lapse photos
+			Should only be used when camera mode is set to eiher "time_lapse" or "gps_lapse"
+		
+		[setup_recording(mode, resolution, framerate, hyperlapse)]
+			Prepares the drone camera for recording, and changes camera_mode to "recording"
+			
+			Parameters
+			----------
+			mode : str, optional
+				the recording mode (default = "standard")
+				- "standard"/"hyperlapse"/"slow_motion"/"high_framerate"
+			resolution : str, optional
+				the recording resolution (default = "res_dci_4k")
+				- "res_dci_4k" (4K Cinema 4096x2160 | allowed fps: 24fps)
+				- "res_uhd_4k" (4K UHD 3840x2160 | allowed fps: 24/25/30fps)
+				- "res_1080p" (FHD 1920x1080 | allowed fps: 24/25/30/48/50/60fps)
+			framerate : str, optional
+				the photo file format (default = "fps_24")
+				- "fps_X" (24/25/30/48/50/60)
+			hyperlapse : str, optional
+				The ratio at which to drop frames (default = "ratio_15")
+				only used if mode is "hyperlapse"
+				- "ratio_X" (15/30/60/120/240)
+		
+		[start_recording()]
+			Starts a recording
+		
+		[stop_recording()]
+			Stops current recording
+		
+		[add_last_media()]
+			Adds the media id of the last media taken to the media list
+			
+			Return
+			----------
+			media_id : str
+				the id of the last media taken
+		
+		[download_media(media_id, name, path)]
+			Downloads the given media with the given download name at the given location
+		
+			Parameters
+			----------
+			media_id : str
+				the media to download
+			name : str, optional
+				the name of the file to be downloaded, if None is provided it will use the 
+				resource id instead
+			path : str, optional
+				the name of the location to download the file at, if None is provided it will
+				default to self.download_dir
+			
+			Return
+			----------
+			download_path : str
+				the location of the downloaded image
+			
+		[download_last_media()]
+			Downloads the last media taken with the given download name at the given location
+			
+			Parameters
+			----------
+			name : str, optional
+				the name of the file to be downloaded, if None is provided it will use the 
+				resource id instead
+			path : str, optional
+				the name of the location to download the file at, if None is provided it will
+				default to self.download_dir
+			
+			Return
+			----------
+			download_path : str
+				the location of the downloaded image
+
+		[setup_stream(value, record, yuv_frame_processing, yuv_frame_cb, h264_frame_cb, start_cb, end_cb, flush_cb)]
+			Sets up the streaming mode:
+
+			Parameters
+			----------
+			value - low_latency(0)/high_reliability(1)/high_reliability_low_framerate(2)
+			record - True/False	
+			yuv_frame_processing - "None" (default: saves frames to Disk)/Custom
+			yuv_frame_cb - None (default: saves yuv frames to queue)/Custom
+			h264_frame_cb - None (default: saves fps and bitrate metadata)/Custom
+			start_cb - None (default: pass)/Custom
+			end_cb - None (default: pass)/Custom
+			flush_cb - None (default: empties the queue)/Custom
+		
+		[start_stream()]
+			Starts the live video stream
+		
+		[stop_stream()]
+			Stops the current live video stream
+			
+		
